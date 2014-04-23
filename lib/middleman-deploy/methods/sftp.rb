@@ -27,7 +27,7 @@ module Middleman
 
       protected
 
-        def handle_exception(exception)
+        def handle_exception(exception, file_path)
           reply     = exception.message
           err_code  = reply[0,3].to_i
 
