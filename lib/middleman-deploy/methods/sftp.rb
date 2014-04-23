@@ -50,7 +50,7 @@ module Middleman
           file_path = "#{self.path}/#{filename}"
 
           begin
-            sftp.upload(filename, file_path)
+            sftp.upload!(filename, file_path)
           rescue Exception => exception
             handle_exception(exception, file_path)
           end
